@@ -5,7 +5,7 @@ title: 'Hello Again'
 ---
 Oooooh-weeee, my second blog post!
 
-![Gatsby Image](/src/images/gatsby-astronaut.png)
+![Gatsby Image](../../images/gatsby-astronaut.png)
 
 Wonder if this will work?
 
