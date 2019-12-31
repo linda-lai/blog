@@ -14,7 +14,7 @@ export default function Template({
 
     <Layout>
       <SEO title="Page two" />
-      <div className="blog-post-container">
+      <div className="container">
         <Helmet title={`${post.frontmatter.title}`}/>
         <div
           className="blog-post-content"
