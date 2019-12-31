@@ -2,6 +2,7 @@
 path: '/2019-12-29-hello-world'
 date: 2017-07-12T17:12:33.962Z
 title: 'Hello world'
+tags: ['first', 'tech', 'intro']
 ---
 # Home
 Oooooh-weeee, my first blog post!
