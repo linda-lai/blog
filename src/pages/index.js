@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 
-export default function Index({ data }) {
+export default function Home({ data }) {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
@@ -28,7 +28,7 @@ export default function Index({ data }) {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

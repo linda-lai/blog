@@ -1,23 +1,5 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require('path')
 const _ = require("lodash")
-
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({
-      node,
-      getNode,
-      basePath: `pages/`
-    })
-    {console.log(slug)}
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug
-    })
-  }
-}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions

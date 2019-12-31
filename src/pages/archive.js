@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import { graphql } from 'gatsby'
+import { Link, graphql } from "gatsby"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -9,22 +9,21 @@ const Archive = ({ data }) => {
 
   return (
     <Layout>
-      {console.log(data)}
-      {console.log(posts)}
       <div className="container">
-        <SEO title="Page two" />
+        <SEO title="Archive" />
         <h1>Archive</h1>
         <h4>{posts.length} posts</h4>
         {posts.map(post => {
           const { frontmatter } = post.node
           return (
             <div className="">
-              {console.log(frontmatter)}
-              <h2>{frontmatter.title}</h2>
-              <h3>{frontmatter.date}</h3>
-            <Link to={frontmatter.path}>
-              <img src="https://source.unsplash.com/random/400x200" alt=""/>
-            </Link>
+              <Link to={frontmatter.path}>
+                <h2>{frontmatter.title}</h2>
+              </Link>
+              <h4>{frontmatter.date}</h4>
+              <Link to={frontmatter.path}>
+                <img src="https://source.unsplash.com/random/400x200" alt=""/>
+              </Link>
             </div>
           )
         })}
