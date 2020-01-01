@@ -34,14 +34,16 @@ const Layout = ({ children }) => {
         © {new Date().getFullYear()}{` `}
         <a
           href="https://www.linda-lai.com"
-          target="_blank" >
+          target="_blank"
+          rel='noreferrer noopener'>
           Linda Lai
         </a>,
         Built with
         {` `}
         <a
           href="https://www.gatsbyjs.org"
-          target="_blank" >
+          target="_blank"
+          rel='noreferrer noopener'>
           Gatsby
         </a>
       </footer>
