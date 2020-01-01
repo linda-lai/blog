@@ -13,22 +13,23 @@ const Header = ({ siteTitle }) => (
           </Link>
         </h1>
       </nav>
+
       <nav className={styles.navigationRight}>
-        <h3 className={styles.headerLink}>
+        <h2 className={styles.headerLink}>
           <Link to='/about' className={styles.headerTitleLink}>
             About
           </Link>
-        </h3>
-        <h3 className={styles.headerLink}>
+        </h2>
+        <h2 className={styles.headerLink}>
           <Link to='/archive' className={styles.headerTitleLink}>
             Archive
           </Link>
-        </h3>
-        <h3 className={styles.headerLink}>
+        </h2>
+        <h2 className={styles.headerLink}>
           <Link to='/tags' className={styles.headerTitleLink}>
             Tags
           </Link>
-        </h3>
+        </h2>
       </nav>
     </div>
   </header>

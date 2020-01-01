@@ -1,10 +1,16 @@
 import React from 'react'
+import styles from '../styles/page-intro.module.css'
 
 const PageIntro = () => {
   return (
-    <div>
-      <h1>Hi, I'm Linda.</h1>
-      <h4>I</h4>
+    <div className={styles.pageIntro}>
+      <h1>Hi, hello, hey! I'm Linda.</h1>
+      {/* <div>
+        <img src="https://source.unsplash.com/random/1600x500" alt=""/>
+      </div> */}
+      <h4 styles>
+        Often, I write code. Occasionally, I write about tech, pop culture, politics or any other flim-flam that piques my interest.
+      </h4>
     </div>
   )
 }

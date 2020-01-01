@@ -29,22 +29,22 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={styles.contentContainer}>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}{` `}
-          <a
-            href="https://www.linda-lai.com"
-            target="_blank" >
-            Linda Lai
-          </a>,
-          Built with
-          {` `}
-          <a
-            href="https://www.gatsbyjs.org"
-            target="_blank" >
-            Gatsby
-          </a>
-        </footer>
       </div>
+      <footer className={styles.footer}>
+        © {new Date().getFullYear()}{` `}
+        <a
+          href="https://www.linda-lai.com"
+          target="_blank" >
+          Linda Lai
+        </a>,
+        Built with
+        {` `}
+        <a
+          href="https://www.gatsbyjs.org"
+          target="_blank" >
+          Gatsby
+        </a>
+      </footer>
     </>
   )
 }
