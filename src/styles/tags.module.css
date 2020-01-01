@@ -1,0 +1,16 @@
+.tag {
+  list-style: none;
+  /* margin: 0; */
+  padding: 15px;
+}
+
+.tag a {
+  border: 2px solid black;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 800;
+}
+
+.tag a:hover {
+  background: dodgerblue;
+}

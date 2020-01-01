@@ -9,6 +9,8 @@ import Layout from '../components/layout'
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
+import styles from '../styles/tags.module.css'
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -22,15 +24,15 @@ const TagsPage = ({
       <Helmet title={title} />
       <div>
         <h1>Tags</h1>
-        <ul>
+        <div className={styles.tagList}>
           {group.map(tag => (
-            <li key={tag.fieldValue}>
+            <div key={tag.fieldValue} className={styles.tag}>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   </Layout>
