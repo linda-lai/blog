@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Linda Lai - Blog`,
+    title: `<Lindalogical />`,
     description: `Words, words, words.`,
     author: `@lindalogical`,
   },
@@ -31,7 +31,7 @@ module.exports = {
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
