@@ -1,0 +1,48 @@
+.blogPostTitleContainer {
+  /* background: #3596FA; */
+  /* background: #29D1BA; */
+}
+
+.blogPostPreview {
+  padding-bottom: 50px;
+}
+
+.blogPostTitle {
+  padding: 10px 10px 10px 10px;
+  /* background: dodgerblue; */
+  border: 3px solid black;
+  box-shadow: 10px 10px grey;
+  text-align: center;
+}
+
+.blogPostTitle a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+  /* height: inherit; */
+}
+
+.blogDate {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: center;
+  width: 100px;
+}
+
+.blogExcerpt {
+  border: 2px solid black;
+  padding: 15px;
+  /* box-shadow: 10px 10px; */
+}
+
+.blogPostLink {
+  font-weight: 500;
+  font-size: 15px;
+  border: 3px solid black;
+  text-decoration: none;
+  padding: 10px 30px;
+  box-shadow: 5px 5px grey;
+}
+
+.blogPostLink:hover {
+  background: dodgerblue;
+}
