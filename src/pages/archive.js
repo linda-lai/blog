@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import styles from '../styles/archive.module.css'
+
 const Archive = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
@@ -13,18 +15,21 @@ const Archive = ({ data }) => {
         <SEO title="Archive" />
         <h1>Archive</h1>
         <h4>{posts.length} posts</h4>
+        <div className={styles.archiveTagsLink}>
+          <Link to="/tags">Tags</Link>
+        </div>
+        <br />
         {posts.map(post => {
           const { frontmatter } = post.node
           return (
-            <div className="">
+            <div className={styles.archivePostLink}>
               <Link to={frontmatter.path}>
-                <h2>{frontmatter.title}</h2>
+                <h3>{frontmatter.title}</h3>
               </Link>
               <h4>{frontmatter.date}</h4>
             </div>
           )
         })}
-        <Link to="/">Go back to the homepage</Link>
       </div>
     </Layout>
   )
