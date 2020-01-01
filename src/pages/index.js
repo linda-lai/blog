@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
+import PageIntro from "../components/page-intro"
 
 export default function Home({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -9,6 +10,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <div className="blog-posts">
+        <PageIntro />
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
@@ -19,6 +21,9 @@ export default function Home({ data }) {
                 </h1>
                 <h2>{post.frontmatter.date}</h2>
                 <p>{post.excerpt}</p>
+                <Link to={post.frontmatter.path}>
+                  <img src="https://source.unsplash.com/random/400x200" alt=""/>
+                </Link>
               </div>
             )
           })}

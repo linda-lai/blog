@@ -21,9 +21,6 @@ const Archive = ({ data }) => {
                 <h2>{frontmatter.title}</h2>
               </Link>
               <h4>{frontmatter.date}</h4>
-              <Link to={frontmatter.path}>
-                <img src="https://source.unsplash.com/random/400x200" alt=""/>
-              </Link>
             </div>
           )
         })}
@@ -42,7 +39,7 @@ export const archiveQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD-MM-YYYY")
             path
           }
         }

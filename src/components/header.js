@@ -6,24 +6,30 @@ import styles from '../styles/header.module.css'
 const Header = ({ siteTitle }) => (
   <header className={styles.headerContainer}>
     <div className={styles.headerWrapper}>
-      <div className={styles.navigationLeft}>
+      <nav className={styles.navigationLeft}>
         <h1 className={styles.headerTitle}>
           <Link to="/" className={styles.headerTitleLink} >
             {siteTitle}
           </Link>
         </h1>
-      </div>
-      <div className={styles.navigationRight}>
-        <h2 className={styles.headerLink}>
-          <Link to='/about' className={styles.headerTitleLink}> About</Link>
-        </h2>
-        <h2 className={styles.headerLink}>
-          <Link to='/archive' className={styles.headerTitleLink}>About</Link>
-        </h2>
-        <h2 className={styles.headerLink}>
-          <Link to='/tags' className={styles.headerTitleLink}>Tags</Link>
-        </h2>
-      </div>
+      </nav>
+      <nav className={styles.navigationRight}>
+        <h3 className={styles.headerLink}>
+          <Link to='/about' className={styles.headerTitleLink}>
+            About
+          </Link>
+        </h3>
+        <h3 className={styles.headerLink}>
+          <Link to='/archive' className={styles.headerTitleLink}>
+            Archive
+          </Link>
+        </h3>
+        <h3 className={styles.headerLink}>
+          <Link to='/tags' className={styles.headerTitleLink}>
+            Tags
+          </Link>
+        </h3>
+      </nav>
     </div>
   </header>
 )
