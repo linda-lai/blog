@@ -1,6 +1,6 @@
 ---
 path: '/2019-12-30-hello-again'
-date: 2017-07-12T17:12:33.962Z
+date: 2019-12-30
 title: 'Hello Again'
 tags: ['second', 'tech', 'career', 'testing_spaces']
 ---
