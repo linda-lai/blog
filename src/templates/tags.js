@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Layout from '../components/layout'
+import styles from '../styles/tags.module.css'
 
-// Components
 import { Link, graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
@@ -17,17 +17,25 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
       <div>
         <h1>{tagHeader}</h1>
-        <ul>
+        <div className={styles.allTag}>
+          <Link to="/tags">All Tags</Link>
+        </div>
+        <br />
+        <div >
           {edges.map(({ node }) => {
-            const { title, path } = node.frontmatter
+            const { title, path, date } = node.frontmatter
             return (
-              <li key={path}>
-                <Link to={path}>{title}</Link>
-              </li>
+              <div key={path} className={styles.taggedArticle}>
+                <Link to={path}>
+                  <h3>
+                    {title}
+                  </h3>
+                </Link>
+                <h4>{date}</h4>
+              </div>
             )
           })}
-        </ul>
-        <Link to="/tags">All tags</Link>
+        </div>
       </div>
     </Layout>
   )
@@ -69,6 +77,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
+            date(formatString: "DD-MM-YYYY")
           }
         }
       }

@@ -9,17 +9,6 @@
   background: dodgerblue;
 }
 
-.archivePostLink {
-  /* display: inline; */
-  /* background: dodgerblue; */
-}
-
-.archivePostLink a {
-  /* text-decoration: none; */
+.archivePostLink a, a, a:visited, a:hover, a:active {
   color: inherit;
-  /* background: dodgerblue; */
-}
-
-.archivePostLink:hover {
-  background: dodgerblue;
 }
