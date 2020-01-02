@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from "gatsby"
 import { Helmet } from 'react-helmet'
-// import '../css/blog-post.css'
+import styles from '../styles/blog-post.module.css'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,14 +14,16 @@ export default function Template({
 
     <Layout>
       <SEO title="Page two" />
-      <div className="container">
+      <div className={styles.blogTemplateContainer}>
         <Helmet title={`${post.frontmatter.title}`}/>
         <div
-          className="blog-post-content"
+          className={styles.blogTemplateContent}
           dangerouslySetInnerHTML={{ __html: post.html }}>
         </div>
+        <Link to="/" className={styles.homeLink}>
+            Home
+        </Link>
       </div>
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
   )
 }

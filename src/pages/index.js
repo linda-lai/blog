@@ -29,13 +29,13 @@ export default function Home({ data }) {
                   {post.frontmatter.date}
                 </h5>
                 <Link to={post.frontmatter.path}>
-                  <img src="https://source.unsplash.com/random/1024x200" alt=""/>
+                  <img src="https://source.unsplash.com/random/768x350" alt=""/>
                 </Link>
                 <p className={styles.blogExcerpt}>{post.excerpt}</p>
                 <Link
                   to={post.frontmatter.path}
                   className={styles.blogPostLink} >
-                  More
+                  More...
                 </Link>
               </article>
             )
