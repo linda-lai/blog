@@ -31,6 +31,7 @@ export default function Home({ data }) {
                 <Link to={post.frontmatter.path}>
                   <img src="https://source.unsplash.com/random/768x350" alt=""/>
                 </Link>
+                <img src={post.frontmatter.hero.childImageSharp.fluid.src} alt=""/>
                 <p className={styles.blogExcerpt}>{post.excerpt}</p>
                 <Link
                   to={post.frontmatter.path}
@@ -56,6 +57,24 @@ export const pageQuery = graphql`
             title
             date(formatString: "DD/MM/YYYY")
             path
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                  originalImg
+                  originalName
+                  presentationWidth
+                  presentationHeight
+                }
+              }
+            }
           }
         }
       }

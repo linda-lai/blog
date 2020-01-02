@@ -15,6 +15,14 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      // Plugin for sourcing data into your Gatsby application from your local filesystem.
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/pages/content`,
+      },
+    },
     // Intercepts all local links that have not been created in React, and replaces their behavior. This avoids the browser having to refresh the whole page when navigating between local pages, preserving the Single Page Application (SPA) feel.
     `gatsby-plugin-catch-links`,
     // Creates ImageSharp nodes from image types that are supported by the Sharp image processing library and provides fields in their GraphQL types for processing your images in a variety of ways including resizing, cropping, and creating responsive images.
