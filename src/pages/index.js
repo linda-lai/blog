@@ -11,38 +11,35 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <div>
-        <PageIntro />
-        <div className={styles.blogPostContainer}>
-          {posts
-            .filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }) => {
-              return (
-                <div className={styles.blogPostPreview} key={post.id}>
-                  <div className={styles.blogPostTitleContainer}>
-                    <h2 className={styles.blogPostTitle}>
-                      <Link to={post.frontmatter.path}>
-                        {post.frontmatter.title}
-                      </Link>
-                    </h2>
-                  </div>
-                  <h5 className={styles.blogDate}>
-                    {post.frontmatter.date}
-                  </h5>
-                  <Link to={post.frontmatter.path}>
-                    <img src="https://source.unsplash.com/random/760x200" alt=""/>
-                  </Link>
-                  <p className={styles.blogExcerpt}>{post.excerpt}</p>
-                  <Link
-                    to={post.frontmatter.path}
-                    className={styles.blogPostLink} >
-                    More
-                  </Link>
-                  <br/>
+      <PageIntro />
+      <div className={styles.blogFeed}>
+        {posts
+          .filter(post => post.node.frontmatter.title.length > 0)
+          .map(({ node: post }) => {
+            return (
+              <article className={styles.blogPostPreview} key={post.id}>
+                <div className={styles.blogPostTitleContainer}>
+                  <h2 className={styles.blogPostTitle}>
+                    <Link to={post.frontmatter.path}>
+                      {post.frontmatter.title}
+                    </Link>
+                  </h2>
                 </div>
-              )
-            })}
-        </div>
+                <h5 className={styles.blogDate}>
+                  {post.frontmatter.date}
+                </h5>
+                <Link to={post.frontmatter.path}>
+                  <img src="https://source.unsplash.com/random/760x200" alt=""/>
+                </Link>
+                <p className={styles.blogExcerpt}>{post.excerpt}</p>
+                <Link
+                  to={post.frontmatter.path}
+                  className={styles.blogPostLink} >
+                  More
+                </Link>
+              </article>
+            )
+          })}
       </div>
     </Layout>
   )
