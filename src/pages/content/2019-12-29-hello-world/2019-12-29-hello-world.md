@@ -3,6 +3,7 @@ path: '/2019-12-29-hello-world'
 date: 2019-12-29
 title: 'Hello world'
 tags: ['first', 'tech', 'intro']
+hero: '../../../images/logo.png'
 ---
 # Home
 Oooooh-weeee, my first blog post!
