@@ -3,12 +3,17 @@
   background: #29D1BA;
 }
 
+.blogFeed {
+ display: grid;
+ grid-template-columns: 1fr;
+}
+
 .blogFeed .blogPostPreview:nth-child(2n) .blogPostTitle {
-  background: #FED430;
+  background: #9573F6;
 }
 
 .blogFeed .blogPostPreview:nth-child(3n) .blogPostTitle {
-  background: #FECFC9;
+  background: #FED430;
 }
 
 .blogPostPreview {
@@ -27,7 +32,7 @@
 
 .blogPostTitle {
   padding: 10px 10px 10px 10px;
-  border: 3px solid black;
+  border: 5px solid black;
   box-shadow: 10px 10px #262626;
   text-align: center;
 }
@@ -46,7 +51,7 @@
 }
 
 .blogExcerpt {
-  border: 2px solid black;
+  border: 3px solid black;
   padding: 15px;
   /* box-shadow: 10px 10px; */
 }
@@ -61,5 +66,11 @@
 }
 
 .blogPostLink:hover {
-  background: dodgerblue;
+  background: #FECFC9;
+}
+
+@media only screen and (min-width: 768px) {
+  .blogFeed {
+    grid-template-columns: 1fr 1fr;
+  }
 }

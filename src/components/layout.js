@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <section className={styles.blogSiteContainer}>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={styles.contentContainer}>
-        <main>{children}</main>
-      </div>
+      <main className={styles.mainContainer}>
+        {children}
+      </main>
       <footer className={styles.footer}>
         © {new Date().getFullYear()}{` `}
         <a
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
           Gatsby
         </a>
       </footer>
-    </>
+    </section>
   )
 }
 

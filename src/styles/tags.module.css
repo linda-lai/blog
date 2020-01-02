@@ -12,14 +12,19 @@
 }
 
 .tag a:hover {
-  background: dodgerblue;
+  background: #FECFC9;
 }
 
-.allTag {
+.allTag a {
   border: 2px solid black;
   text-decoration: none;
   padding: 10px;
   font-weight: 800;
   width: 100px;
   text-align: center;
+}
+
+
+.allTag a:hover {
+  background: #FECFC9;
 }

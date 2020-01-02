@@ -6,12 +6,12 @@ import styles from '../styles/header.module.css'
 const Header = ({ siteTitle }) => (
   <header className={styles.headerContainer}>
     <div className={styles.headerWrapper}>
+      <h1 className={styles.headerTitle}>
+        <Link to="/" className={styles.headerTitleLink} >
+          {siteTitle}
+        </Link>
+      </h1>
       <nav className={styles.navigation}>
-        <h1 className={styles.headerTitle}>
-          <Link to="/" className={styles.headerTitleLink} >
-            {siteTitle}
-          </Link>
-        </h1>
         <h2 className={styles.headerLink}>
           <Link to='/about' className={styles.headerTitleLink}>
             About
