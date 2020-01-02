@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from "gatsby"
+import Img from 'gatsby-image'
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
 
@@ -10,6 +11,7 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query we'll write in a bit
 }) {
   const { markdownRemark: post } = data // data.markdownRemark holds your post data
+  // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
 
     <Layout>

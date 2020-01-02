@@ -3,6 +3,7 @@ path: '/2019-12-30-hello-again'
 date: 2019-12-30
 title: 'Hello Again'
 tags: ['second', 'tech', 'career', 'goals']
+hero: '../2019-12-29-hello-world/logo.png'
 ---
 Oooooh-weeee, my second blog post!
 
