@@ -1,0 +1,21 @@
+.blogTemplateContainer {}
+
+.blogTemplateContent {
+  font-weight: 900;
+}
+
+.homeLink {
+  font-weight: 600;
+  font-size: 15px;
+  border: 3px solid black;
+  text-decoration: none;
+  padding: 10px 30px;
+  text-align: center;
+  margin: 0 auto;
+  /* box-shadow: 5px 5px #262626; */
+}
+
+
+.homeLink:hover {
+  background: #FECFC9;
+}
