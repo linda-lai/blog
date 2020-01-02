@@ -16,7 +16,7 @@ const Archive = ({ data }) => {
         <h1>Archive</h1>
         <h4>{posts.length} posts</h4>
         <div className={styles.archiveTagsLink}>
-          <Link to="/tags">Tags</Link>
+          <Link to="/tags">All Tags</Link>
         </div>
         <br />
         {posts.map(post => {

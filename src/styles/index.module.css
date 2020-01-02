@@ -44,25 +44,34 @@
 }
 
 .blogDate {
-  border: 2px solid black;
+  border: 3px solid black;
   padding: 8px;
   text-align: center;
-  width: 100px;
+  width: 110px;
 }
 
 .blogExcerpt {
-  border: 3px solid black;
-  padding: 15px;
+  border: 5px solid black;
+  padding: 14px;
+  height: 150px;
+  font-weight: 600;
   /* box-shadow: 10px 10px; */
+  margin-bottom: 40px;
+}
+
+.blogExcerpt {
+  font-weight: 600;
 }
 
 .blogPostLink {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   border: 3px solid black;
   text-decoration: none;
   padding: 10px 30px;
-  box-shadow: 5px 5px #262626;
+  text-align: center;
+  margin: 0 auto;
+  /* box-shadow: 5px 5px #262626; */
 }
 
 .blogPostLink:hover {
