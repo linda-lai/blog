@@ -2,8 +2,9 @@
   /* background: #29D1BA; */
   /* background: #3596FA; */
   background: dodgerblue;
-  margin-bottom: 1.45rem;
-  border: 5px solid #000000;
+  /* margin-bottom: 1.45rem; */
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid #000000;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -12,11 +13,10 @@
 .headerWrapper {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1200px;
-  /* margin: 1.45rem 1.0875rem; */
   position: relative;
   height: 90px;
 }

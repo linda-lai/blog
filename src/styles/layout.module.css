@@ -1,17 +1,31 @@
-.contentContainer {
+.blogSiteContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+  /* background-color: powderblue; */
+}
+
+.mainContainer {
   margin: 0 auto;
-  max-width: 760px;
+  /* max-width: 760px; */
+  max-width: 1024px;
   padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
-  /* background: lightskyblue; */
+  padding-top: 30px;
+  width: 100%;
+  /* background:; */
 }
 
 .footer {
-  background: #FED430;
+  display: block;
+  background: #EB362F;
   line-height: 60px;
-  /* border: 5px solid black; */
   font-weight: bolder;
   text-align: center;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  margin-top: auto;
 }
 
 .footer a {
