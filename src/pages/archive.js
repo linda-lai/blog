@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Layout from "../templates/layout"
-import SEO from "../components/seo"
+import Layout from '../templates/layout'
+import SEO from '../components/seo'
 
 import styles from '../styles/archive.module.css'
 
@@ -11,12 +11,12 @@ const Archive = ({ data }) => {
 
   return (
     <Layout>
-      <div className="container">
-        <SEO title="Archive" />
+      <div className={styles.archiveContainer}>
+        <SEO title='Archive' />
         <h1>Archive</h1>
         <h4>{posts.length} posts</h4>
         <div className={styles.archiveTagsLink}>
-          <Link to="/tags">All Tags</Link>
+          <Link to='/tags'>All Tags</Link>
         </div>
         <br />
         {posts.map(post => {

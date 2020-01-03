@@ -6,16 +6,16 @@ const Footer = () => {
     <footer className={styles.footer}>
       © {new Date().getFullYear()}{` `}
       <a
-        href="https://www.linda-lai.com"
-        target="_blank"
+        href='https://www.linda-lai.com'
+        target='_blank'
         rel='noreferrer noopener'>
         Linda Lai
       </a>,
       Built with
       {` `}
       <a
-        href="https://www.gatsbyjs.org"
-        target="_blank"
+        href='https://www.gatsbyjs.org'
+        target='_blank'
         rel='noreferrer noopener'>
         Gatsby
       </a>

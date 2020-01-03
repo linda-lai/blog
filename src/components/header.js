@@ -3,12 +3,12 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from '../styles/header.module.css'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className={styles.headerContainer}>
     <div className={styles.headerWrapper}>
       <h1 className={styles.headerTitle}>
         <Link to="/" className={styles.headerTitleLink} >
-          {siteTitle}
+          &lt;<span>LindaLogical</span> /&gt;
         </Link>
       </h1>
       <nav className={styles.navigation}>
