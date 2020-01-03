@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../templates/layout'
 import styles from '../styles/index.module.css'
@@ -29,8 +30,8 @@ const Home = ({ data }) => {
                   {post.frontmatter.date}
                 </h5>
                 <Link to={post.frontmatter.path}>
-                  <img
-                    src={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
+                  <Img
+                    fluid={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
                 </Link>
                 <div className={styles.blogExcerpt}>
                   <p>{post.excerpt}</p>
@@ -64,18 +65,7 @@ export const pageQuery = graphql`
             hero {
               childImageSharp {
                 fluid(maxWidth: 800) {
-                  base64
-                  tracedSVG
-                  aspectRatio
                   src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                  sizes
-                  originalImg
-                  originalName
-                  presentationWidth
-                  presentationHeight
                 }
               }
             }
