@@ -1,17 +1,17 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../templates/layout"
 import styles from '../styles/index.module.css'
 
-import PageIntro from "../components/page-intro"
+import Intro from "../components/intro"
 
 export default function Home({ data }) {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
-      <PageIntro />
+      <Intro />
       <div className={styles.blogFeed}>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)

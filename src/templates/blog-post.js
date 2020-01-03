@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
 
-import Layout from "../components/layout"
+import Layout from "./layout"
 import SEO from "../components/seo"
 
 export default function Template({

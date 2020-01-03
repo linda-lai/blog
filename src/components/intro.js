@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from '../styles/page-intro.module.css'
+import styles from '../styles/intro.module.css'
 
-const PageIntro = () => {
+const Intro = () => {
   return (
-    <div className={styles.pageIntro}>
+    <div className={styles.intro}>
       <h1>Hi, hello, hey! I'm Linda.</h1>
       {/* <div>
         <img src="https://source.unsplash.com/random/1600x500" alt=""/>
@@ -15,4 +15,4 @@ const PageIntro = () => {
   )
 }
 
-export default PageIntro
+export default Intro
