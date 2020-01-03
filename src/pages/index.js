@@ -32,7 +32,9 @@ const Home = ({ data }) => {
                   <img
                     src={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
                 </Link>
-                <p className={styles.blogExcerpt}>{post.excerpt}</p>
+                <div className={styles.blogExcerpt}>
+                  <p>{post.excerpt}</p>
+                </div>
                 <Link
                   to={post.frontmatter.path}
                   className={styles.blogPostLink} >
@@ -53,7 +55,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 250)
           id
           frontmatter {
             title
