@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
-import Layout from '../components/layout'
+import Layout from '../templates/layout'
 
 // Components
 import { Helmet } from "react-helmet"
