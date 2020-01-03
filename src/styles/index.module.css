@@ -52,7 +52,7 @@
   border: 5px solid black;
   padding: 14px 14px 0px 14px;
   margin-bottom: 40px;
-  flex: 1;
+  flex: 1; /* @magic! */
   display: flex;
   /* flex-direction: column; */
   /* justify-content: safe flex-end; */
