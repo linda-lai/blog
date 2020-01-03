@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
 
 import Layout from '../templates/layout'
 import styles from '../styles/index.module.css'
@@ -30,8 +29,8 @@ const Home = ({ data }) => {
                   {post.frontmatter.date}
                 </h5>
                 <Link to={post.frontmatter.path}>
-                  <Img
-                    fluid={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
+                  <img
+                    src={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
                 </Link>
                 <div className={styles.blogExcerpt}>
                   <p>{post.excerpt}</p>
