@@ -29,9 +29,9 @@ const Home = ({ data }) => {
                   {post.frontmatter.date}
                 </h5>
                 <Link to={post.frontmatter.path}>
-                  <img src='https://source.unsplash.com/random/768x400' alt=''/>
+                  <img
+                    src={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
                 </Link>
-                {/* <img src={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/> */}
                 <p className={styles.blogExcerpt}>{post.excerpt}</p>
                 <Link
                   to={post.frontmatter.path}
