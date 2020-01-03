@@ -16,18 +16,3 @@
   width: 100%;
   /* background:; */
 }
-
-.footer {
-  display: block;
-  background: #EB362F;
-  line-height: 60px;
-  font-weight: bolder;
-  text-align: center;
-  border-top: 10px solid black;
-  border-bottom: 10px solid black;
-  margin-top: auto;
-}
-
-.footer a {
-  text-decoration: none;
-}
