@@ -8,7 +8,7 @@ const Header = () => (
     <div className={styles.headerWrapper}>
       <h1 className={styles.headerTitle}>
         <Link to="/" className={styles.headerTitleLink} >
-          &lt;<span>LindaLogical</span> /&gt;
+          &lt;<span className={styles.headerLogo}>LindaLogical</span> /&gt;
         </Link>
       </h1>
       <nav className={styles.navigation}>
