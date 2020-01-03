@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 import Layout from '../templates/layout'
 
 // Components
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
+import { Helmet } from 'react-helmet'
+import { Link, graphql } from 'gatsby'
 
 import styles from '../styles/tags.module.css'
 
