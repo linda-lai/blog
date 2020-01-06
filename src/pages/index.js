@@ -1,16 +1,19 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
+import Intro from '../components/intro'
 import Layout from '../templates/layout'
+import SEO from '../components/seo'
+
 import styles from '../styles/index.module.css'
 
-import Intro from '../components/intro'
 
 const Home = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
     <Layout>
+      <SEO title='Home' />
       <Intro />
       <div className={styles.blogFeed}>
         {posts

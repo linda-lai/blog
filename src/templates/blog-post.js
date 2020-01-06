@@ -1,11 +1,11 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from 'gatsby'
 // import Img from 'gatsby-image'
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
 
-import Layout from "./layout"
-import SEO from "../components/seo"
+import Layout from './layout'
+import SEO from '../components/seo'
 
 const Template = ({
   data, // this prop will be injected by the GraphQL query
@@ -22,7 +22,7 @@ const Template = ({
           className={styles.blogTemplateContent}
           dangerouslySetInnerHTML={{ __html: post.html }}>
         </div>
-        <Link to="/" className={styles.homeLink}>
+        <Link to='/' className={styles.homeLink}>
             Home
         </Link>
       </div>
