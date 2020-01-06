@@ -31,6 +31,13 @@
   color: #000000;
 }
 
+.headerSiteTitle {
+  height: 100%;
+  color: #000000;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
 .headerTitleLink {
   height: 100%;
   color: #000000;
@@ -52,10 +59,37 @@
 
 @media only screen and (max-width: 800px) {
   .headerLogo {
-    display: none;
+    /* display: none; */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .headerSiteTitle {
+    /* padding: 5px 0px 5px 5px; */
   }
 
   .headerTitleLink {
-    padding: 0px 5px;
+    /* font-size: 23px; */
+    /* padding: 0px 3px; */
+    /* background: pink; */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .headerSiteTitle {
+    /* display: none; */
+  }
+
+  .headerTitleLink {
+    font-size: 20px;
+    /* padding: 0px 20px 0px 0px; */
+    /* background: pink; */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .headerTitleLink {
+    /* padding: 0px 1px 0px 0px; */
   }
 }
