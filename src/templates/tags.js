@@ -1,24 +1,28 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import Layout from '../templates/layout'
 import styles from '../styles/tags.module.css'
+import SEO from '../components/seo'
 
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from 'gatsby'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
+    totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`
 
   return (
     <Layout>
+      <SEO title={`${tag}`} />
       <div>
+        <Helmet title={`${tag}`}/>
         <h1>{tagHeader}</h1>
         <div className={styles.allTag}>
-          <Link to="/tags">All Tags</Link>
+          <Link to='/tags'>All Tags</Link>
         </div>
         <br />
         <div >

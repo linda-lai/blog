@@ -1,11 +1,15 @@
 import React from 'react'
+
 import Layout from '../templates/layout'
+import SEO from '../components/seo'
+
 import styles from '../styles/about.module.css'
 // import logo from '../images/logo.svg'
 
 const About = () => {
   return (
     <Layout>
+      <SEO title='About' />
       <div className={styles.about}>
         <h1>About Me</h1>
         <p>
