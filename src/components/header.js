@@ -5,13 +5,13 @@ import styles from '../styles/header.module.css'
 
 const Header = () => (
   <header className={styles.headerContainer}>
-    <div className={styles.headerWrapper}>
+    <nav className={styles.headerWrapper}>
       <h1 className={styles.headerTitle}>
         <Link to='/' className={styles.headerSiteTitle} >
           &lt;<span className={styles.headerLogo}>LindaLogical</span> /&gt;
         </Link>
       </h1>
-      <nav className={styles.navigation}>
+      <div className={styles.navigation}>
         <h2 className={styles.headerLink}>
           <Link to='/about' className={styles.headerTitleLink}>
             About
@@ -27,8 +27,8 @@ const Header = () => (
             Tags
           </Link>
         </h2>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 )
 
