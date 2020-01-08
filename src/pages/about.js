@@ -13,7 +13,10 @@ const About = () => {
       <div className={styles.about}>
         <h1>About Me</h1>
         <p>
-          Hi, hello, hey! I'm Linda. Programming, puns and people - that's my jam. After feeling restless and dissatisfied with my career trajectory a few years ago, I began dipping my toes into digital and development eating the world today, found the water was warm, and haven't look back. I took the plunge and recently completed a Diploma of Information Technology at Coder Academy learning full-stack with Ruby/Rails, JavaScript and the MERN stack.
+          Hi, hello, hey! I'm Linda, a developing developer, code-blooded female and all round Hermione learning (and loving!) to code the software eating the world today. Perpetually curious, relentlessly enthusiastic and unabashedly dorky - that's me. A recent career changer into tech, I dipped my toes into the world of digital/development, found the water was warm, and haven't look back.
+        </p>
+        <p>
+          Programming, puns, politics, pop culture and people - that's my jam.  Here you'll find an assortment of my musings and scribbles.
         </p>
         <img src={logo} alt="Lindalogical logo" className={styles.aboutLogo} />
       </div>

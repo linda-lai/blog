@@ -1,7 +1,7 @@
 {
   "name": "gatsby-blog-lindalogical",
   "private": true,
-  "description": "A simple blog to get up and developing quickly with Gatsby",
+  "description": "<LindaLogical name={LindaLai} type={blog} />",
   "version": "0.1.0",
   "author": "Linda Lai <lindalai.615@gmail.com>",
   "dependencies": {
