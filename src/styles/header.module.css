@@ -69,6 +69,7 @@
 
   .headerWrapper {
     height: 120px;
+    padding-left: 0px;
   }
 
   .navigation {
