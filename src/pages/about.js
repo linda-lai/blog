@@ -4,7 +4,7 @@ import Layout from '../templates/layout'
 import SEO from '../components/seo'
 
 import styles from '../styles/about.module.css'
-// import logo from '../images/logo.svg'
+import logo from '../images/logo-lindalogical.png'
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
         <p>
           Hi, hello, hey! I'm Linda. Programming, puns and people - that's my jam. After feeling restless and dissatisfied with my career trajectory a few years ago, I began dipping my toes into digital and development eating the world today, found the water was warm, and haven't look back. I took the plunge and recently completed a Diploma of Information Technology at Coder Academy learning full-stack with Ruby/Rails, JavaScript and the MERN stack.
         </p>
-        {/* <img src={logo} alt=""/> */}
+        <img src={logo} alt=""/>
       </div>
     </Layout>
   )
