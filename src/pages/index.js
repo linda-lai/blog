@@ -7,6 +7,7 @@ import Layout from '../templates/layout'
 import SEO from '../components/seo'
 
 import { Helmet } from 'react-helmet'
+import Img from "gatsby-image"
 
 import styles from '../styles/index.module.css'
 
@@ -31,12 +32,14 @@ const Home = ({ data }) => {
                     </Link>
                   </h2>
                 </div>
+                {/* {console.log(post.frontmatter.hero.childImageSharp.fluid)} */}
                 <h5 className={styles.blogDate}>
                   {post.frontmatter.date}
                 </h5>
                 <Link to={post.frontmatter.path}>
-                  <img
-                    src={post.frontmatter.hero.childImageSharp.fluid.src} alt=''/>
+                  <Img
+                    className={styles.blogPreviewImg}
+                    fluid={post.frontmatter.preview.childImageSharp.fluid} />
                 </Link>
                 <div className={styles.blogExcerpt}>
                   <p>{post.excerpt}</p>
@@ -71,7 +74,7 @@ Home.propTypes = {
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
               path: PropTypes.string.isRequired,
-              hero: PropTypes.shape({
+              preview: PropTypes.shape({
                 childImageSharp: PropTypes.shape({
                   fluid: PropTypes.shape({
                     src: PropTypes.string.isRequired
@@ -104,10 +107,11 @@ export const homeQuery = graphql`
             title
             date(formatString: "DD/MM/YYYY")
             path
-            hero {
+            preview {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 1024) {
                   src
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

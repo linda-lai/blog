@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
+import Img from "gatsby-image"
 
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
@@ -12,13 +13,15 @@ const BlogTemplate = ({
   data, // this prop will be injected by the GraphQL query
 }) => {
   const { markdownRemark: post } = data
+  let featuredImgFluid = post.frontmatter.hero.childImageSharp.fluid
 
   return (
     <Layout>
-      {console.log(data)}
       <SEO title={`${post.frontmatter.title}`} />
       <div className={styles.blogTemplateContainer}>
         <Helmet title={`${post.frontmatter.title}`}/>
+        <h1>{post.frontmatter.title}</h1>
+        <Img fluid={featuredImgFluid} />
         <div
           className={styles.blogTemplateContent}
           dangerouslySetInnerHTML={{ __html: post.html }}>
@@ -42,7 +45,7 @@ BlogTemplate.propTypes = {
         date: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired
       })
-    }).isRequired
+    })
   })
 }
 
@@ -54,6 +57,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1024) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
