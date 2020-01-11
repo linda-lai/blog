@@ -58,12 +58,12 @@ Tags.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               path: PropTypes.string.isRequired
-            }),
-          }),
+            })
+          })
         }).isRequired
-      ),
-    }),
-  }),
+      )
+    })
+  })
 }
 
 export default Tags

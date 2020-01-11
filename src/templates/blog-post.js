@@ -1,20 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
-// import Img from 'gatsby-image'
+
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
 
 import Layout from './layout'
 import SEO from '../components/seo'
 
-const Template = ({
+const BlogTemplate = ({
   data, // this prop will be injected by the GraphQL query
 }) => {
-  const { markdownRemark: post } = data // data.markdownRemark holds your post data
-  // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
-  return (
+  const { markdownRemark: post } = data
 
+  return (
     <Layout>
+      {console.log(data)}
       <SEO title={`${post.frontmatter.title}`} />
       <div className={styles.blogTemplateContainer}>
         <Helmet title={`${post.frontmatter.title}`}/>
@@ -30,7 +31,20 @@ const Template = ({
   )
 }
 
-export default Template
+export default BlogTemplate
+
+BlogTemplate.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      html: PropTypes.string.isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired
+      })
+    }).isRequired
+  })
+}
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {

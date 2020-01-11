@@ -1,12 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
 import Intro from '../components/intro'
 import Layout from '../templates/layout'
 import SEO from '../components/seo'
 
-import styles from '../styles/index.module.css'
+import { Helmet } from 'react-helmet'
 
+import styles from '../styles/index.module.css'
 
 const Home = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -14,6 +16,7 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <SEO title='Home' />
+      <Helmet title={data.site.siteMetadata.title} />
       <Intro />
       <div className={styles.blogFeed}>
         {posts
@@ -51,10 +54,47 @@ const Home = ({ data }) => {
   )
 }
 
+Home.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      })
+    }),
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            excerpt: PropTypes.string.isRequired,
+            id: PropTypes.string.isRequired,
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              path: PropTypes.string.isRequired,
+              hero: PropTypes.shape({
+                childImageSharp: PropTypes.shape({
+                  fluid: PropTypes.shape({
+                    src: PropTypes.string.isRequired
+                  })
+                })
+              })
+            })
+          })
+        })
+      ).isRequired
+    })
+  })
+}
+
 export default Home
 
-export const pageQuery = graphql`
+export const homeQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

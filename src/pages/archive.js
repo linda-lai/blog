@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../templates/layout'
@@ -35,6 +36,27 @@ const Archive = ({ data }) => {
   )
 }
 
+Archive.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              path: PropTypes.string.isRequired
+            })
+          })
+        })
+      ).isRequired
+    })
+  })
+}
+
+export default Archive
+
 export const archiveQuery = graphql`
   query {
     allMarkdownRemark {
@@ -52,5 +74,3 @@ export const archiveQuery = graphql`
     }
   }
 `
-
-export default Archive
