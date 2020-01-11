@@ -48,6 +48,11 @@
   width: 110px;
 }
 
+.blogPreviewImg {
+  /* margin-top: -5px; */
+  margin-bottom: 30px;
+}
+
 .blogExcerpt {
   border: 5px solid black;
   padding: 14px 14px 0px 14px;
