@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
@@ -19,6 +20,7 @@ const BlogTemplate = ({
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />
       <div className={styles.blogTemplateContainer}>
+        {deckDeckGoHighlightElement()}
         <Helmet title={`${post.frontmatter.title}`}/>
         <h1>{post.frontmatter.title}</h1>
         <Img fluid={featuredImgFluid} />
