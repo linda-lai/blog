@@ -5,10 +5,10 @@ module.exports = {
     author: `@lindalogical`,
   },
   plugins: [
-    // Support for server rendering data added with React Helmet (a component which lets you control your document head using their React component).
+    // Support for server rendering data added with React Helmet (to control your document head)
     `gatsby-plugin-react-helmet`,
     {
-      // Plugin for sourcing data into your Gatsby application from your local filesystem.
+      // Sourcing data into Gatsby application from local filesystem
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
@@ -16,16 +16,17 @@ module.exports = {
       },
     },
     {
-      // Plugin for sourcing data into your Gatsby application from your local filesystem.
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
         path: `${__dirname}/src/pages/content`,
       },
     },
-    // Intercepts all local links that have not been created in React, and replaces their behavior. This avoids the browser having to refresh the whole page when navigating between local pages, preserving the Single Page Application (SPA) feel.
+    // Intercepts all local links that have not been created in React, and replaces their behavior
+    // Avoids browser refreshing whole page when navigating local pages, preserving the Single Page Application feel
     `gatsby-plugin-catch-links`,
-    // Creates ImageSharp nodes from image types that are supported by the Sharp image processing library and provides fields in their GraphQL types for processing your images in a variety of ways including resizing, cropping, and creating responsive images.
+    // Creates ImageSharp nodes from image types supported by Sharp image processing library
+    // Provides fields in their GraphQL types for processing images in a variety of ways (resizing, cropping, and creating responsive images)
     `gatsby-transformer-sharp`,
     // Exposes several image processing functions built on the Sharp image processing library
     `gatsby-plugin-sharp`,
@@ -47,6 +48,10 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            // Adds cards and syntax highlighting to code blocks in Markdown files
+            resolve: `gatsby-remark-highlight-code`
+          },
           {
             // Processes images in markdown so they can be used in the production build
             resolve: 'gatsby-remark-images',
