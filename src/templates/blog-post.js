@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
@@ -14,6 +15,7 @@ const BlogTemplate = ({
 }) => {
   const { markdownRemark: post } = data
   let featuredImgFluid = post.frontmatter.hero.childImageSharp.fluid
+  {deckDeckGoHighlightElement()}
 
   return (
     <Layout>
