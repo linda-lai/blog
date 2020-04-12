@@ -15,12 +15,12 @@ const BlogTemplate = ({
 }) => {
   const { markdownRemark: post } = data
   let featuredImgFluid = post.frontmatter.hero.childImageSharp.fluid
+  {deckDeckGoHighlightElement()}
 
   return (
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />
       <div className={styles.blogTemplateContainer}>
-        {deckDeckGoHighlightElement()}
         <Helmet title={`${post.frontmatter.title}`}/>
         <h1>{post.frontmatter.title}</h1>
         <Img fluid={featuredImgFluid} />
