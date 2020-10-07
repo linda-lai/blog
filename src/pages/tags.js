@@ -15,25 +15,25 @@ const Tags = ({
     allMarkdownRemark: { group },
   }
 }) => (
-  <Layout>
-    <SEO title='Tags' />
-    <div>
+    <Layout>
+      <SEO title='Tags' />
       <div>
-        <h1>Tags</h1>
-        <div className={styles.tagList}>
-          {group.map(tag => (
-            <div key={tag.fieldValue} className={styles.tag}>
-              <Helmet title={tag.fieldValue} />
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
+        <div>
+          <h1>Tags</h1>
+          <div className={styles.tagList}>
+            {group.map(tag => (
+              <div key={tag.fieldValue} className={styles.tag}>
+                <Helmet title={tag.fieldValue} />
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  {tag.fieldValue} ({tag.totalCount})
               </Link>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
 
 Tags.propTypes = {
   data: PropTypes.shape({

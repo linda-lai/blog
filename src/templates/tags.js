@@ -11,15 +11,14 @@ import { Link, graphql } from 'gatsby'
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'
+    } tagged with "${tag}"`
 
   return (
     <Layout>
       <SEO title={`${tag}`} />
       <div>
-        <Helmet title={`${tag}`}/>
+        <Helmet title={`${tag}`} />
         <h1>{tagHeader}</h1>
         <div className={styles.allTag}>
           <Link to='/tags'>All Tags</Link>

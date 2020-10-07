@@ -15,13 +15,13 @@ const BlogTemplate = ({
 }) => {
   const { markdownRemark: post } = data
   let featuredImgFluid = post.frontmatter.hero.childImageSharp.fluid
-  {deckDeckGoHighlightElement()}
+  { deckDeckGoHighlightElement() }
 
   return (
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />
       <div className={styles.blogTemplateContainer}>
-        <Helmet title={`${post.frontmatter.title}`}/>
+        <Helmet title={`${post.frontmatter.title}`} />
         <h1>{post.frontmatter.title}</h1>
         <Img fluid={featuredImgFluid} />
         <div
@@ -29,10 +29,10 @@ const BlogTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html }}>
         </div>
         <Link to='/' className={styles.homeLink}>
-            Home
+          Home
         </Link>
       </div>
-  </Layout>
+    </Layout>
   )
 }
 
