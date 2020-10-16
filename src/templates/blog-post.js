@@ -15,7 +15,7 @@ const BlogTemplate = ({
 }) => {
   const { markdownRemark: post } = data
   let featuredImgFluid = post.frontmatter.hero.childImageSharp.fluid
-  { deckDeckGoHighlightElement() }
+  deckDeckGoHighlightElement()
 
   return (
     <Layout>
