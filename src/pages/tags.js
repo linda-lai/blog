@@ -20,12 +20,11 @@ const Tags = ({
     <Layout>
       <SEO title='Tags' />
       <HeroTitle
-        title="Linda Lai"
+        title="Tags"
       />
       <Content>
         <div>
           <div>
-            <h1>Tags</h1>
             <div className={styles.tagList}>
               {group.map(tag => (
                 <div key={tag.fieldValue} className={styles.tag}>

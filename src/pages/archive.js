@@ -19,7 +19,6 @@ const Archive = ({ data }) => {
         title="Archive"
       />
       <Content>
-        <h1>Archive</h1>
         <h4>{posts.length} posts</h4>
         <div className={styles.archiveTagsLink}>
           <Link to='/tags'>All Tags</Link>

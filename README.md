@@ -1,4 +1,4 @@
-# < LindaLogical />, a blog built in Gatsby
+# Gatsby Blog
 
 I've been meaning to create a blog *and* play with Gatsby, so downtime over the holidays provided the perfect opportunity. Tentatively but hopefully will write more about my interests and current projects, or at the very least use the blog to document my personal progress, or anything that piques my interest.
 
