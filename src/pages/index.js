@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
-import Intro from '../components/intro'
 import Layout from '../templates/layout'
+import HeroTitle from '../components/hero-title'
+import Content from '../templates/content'
 import SEO from '../components/seo'
 
 import { Helmet } from 'react-helmet'
@@ -18,41 +19,45 @@ const Home = ({ data }) => {
     <Layout>
       <SEO title='Home' />
       <Helmet title={data.site.siteMetadata.title} />
-      <Intro />
-      <div className={styles.blogFeed}>
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <article className={styles.blogPostPreview} key={post.id}>
-                <div className={styles.blogPostTitleContainer}>
-                  <h2 className={styles.blogPostTitle}>
-                    <Link to={post.frontmatter.path}>
-                      {post.frontmatter.title}
-                    </Link>
-                  </h2>
-                </div>
-                {/* {console.log(post.frontmatter.hero.childImageSharp.fluid)} */}
-                <h5 className={styles.blogDate}>
-                  {post.frontmatter.date}
-                </h5>
-                <Link to={post.frontmatter.path}>
-                  <Img
-                    className={styles.blogPreviewImg}
-                    fluid={post.frontmatter.preview.childImageSharp.fluid} />
+      <HeroTitle
+        title="Linda Lai"
+      />
+      <Content>
+        <div className={styles.blogFeed}>
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }) => {
+              return (
+                <article className={styles.blogPostPreview} key={post.id}>
+                  <div className={styles.blogPostTitleContainer}>
+                    <h2 className={styles.blogPostTitle}>
+                      <Link to={post.frontmatter.path}>
+                        {post.frontmatter.title}
+                      </Link>
+                    </h2>
+                  </div>
+                  {/* {console.log(post.frontmatter.hero.childImageSharp.fluid)} */}
+                  <h5 className={styles.blogDate}>
+                    {post.frontmatter.date}
+                  </h5>
+                  <Link to={post.frontmatter.path}>
+                    <Img
+                      className={styles.blogPreviewImg}
+                      fluid={post.frontmatter.preview.childImageSharp.fluid} />
+                  </Link>
+                  <div className={styles.blogExcerpt}>
+                    <p>{post.excerpt}</p>
+                  </div>
+                  <Link
+                    to={post.frontmatter.path}
+                    className={styles.blogPostLink} >
+                    More...
                 </Link>
-                <div className={styles.blogExcerpt}>
-                  <p>{post.excerpt}</p>
-                </div>
-                <Link
-                  to={post.frontmatter.path}
-                  className={styles.blogPostLink} >
-                  More...
-                </Link>
-              </article>
-            )
-          })}
-      </div>
+                </article>
+              )
+            })}
+        </div>
+      </Content>
     </Layout>
   )
 }

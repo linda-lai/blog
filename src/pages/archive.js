@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../templates/layout'
+import HeroTitle from '../components/hero-title'
+import Content from '../templates/content'
 import SEO from '../components/seo'
 
 import styles from '../styles/archive.module.css'
@@ -12,8 +14,11 @@ const Archive = ({ data }) => {
 
   return (
     <Layout>
-      <div className={styles.archiveContainer}>
-        <SEO title='Archive' />
+      <SEO title='Archive' />
+      <HeroTitle
+        title="Archive"
+      />
+      <Content>
         <h1>Archive</h1>
         <h4>{posts.length} posts</h4>
         <div className={styles.archiveTagsLink}>
@@ -31,7 +36,7 @@ const Archive = ({ data }) => {
             </div>
           )
         })}
-      </div>
+      </Content>
     </Layout>
   )
 }

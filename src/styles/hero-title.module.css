@@ -1,0 +1,33 @@
+.heroTitle {
+  background-color:gold;
+  border-bottom: 8px solid black;
+  width: 100%;
+}
+
+.heroTitleWrapper {
+  max-width: 1024px;
+}
+
+.heroTitle h1 {
+  max-width: 850px;
+  margin: 0 150px;
+  /* margin: 0 auto; */
+  /* background-color: ivory; */
+  /* text-align: center; */
+}
+
+.heroTitle h1 {
+  font-size: 120px;
+}
+
+.heroTitle h2 {
+  /* max-width: 1024px; */
+  margin: 0 auto;
+  /* background-color: ivory; */
+  /* text-align: center; */
+}
+
+.heroTitle h2 {
+  font-size: 24px;
+  padding: 20px 0;
+}
