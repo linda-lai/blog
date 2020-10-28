@@ -6,6 +6,8 @@ import { Helmet } from 'react-helmet'
 import kebabCase from 'lodash/kebabCase'
 
 import Layout from '../templates/layout'
+import HeroTitle from '../components/hero-title'
+import Content from '../templates/content'
 import SEO from '../components/seo'
 
 import styles from '../styles/tags.module.css'
@@ -17,21 +19,25 @@ const Tags = ({
 }) => (
     <Layout>
       <SEO title='Tags' />
-      <div>
+      <HeroTitle
+        title="Tags"
+      />
+      <Content>
         <div>
-          <h1>Tags</h1>
-          <div className={styles.tagList}>
-            {group.map(tag => (
-              <div key={tag.fieldValue} className={styles.tag}>
-                <Helmet title={tag.fieldValue} />
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
+          <div>
+            <div className={styles.tagList}>
+              {group.map(tag => (
+                <div key={tag.fieldValue} className={styles.tag}>
+                  <Helmet title={tag.fieldValue} />
+                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                    {tag.fieldValue} ({tag.totalCount})
               </Link>
-              </div>
-            ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </Content>
     </Layout>
   )
 

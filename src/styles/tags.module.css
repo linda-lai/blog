@@ -1,12 +1,13 @@
+/* List All Tags page */
 .tag {
   list-style: none;
   display: inline-block;
-  /* margin: 0; */
+  margin: 0;
   padding: 15px 15px 15px 0px;
 }
 
 .tag a {
-  border: 2px solid black;
+  border: 4px solid black;
   text-decoration: none;
   padding: 10px;
   font-weight: 800;
@@ -16,8 +17,18 @@
   background: #FECFC9;
 }
 
+/* Show a specific Tag page */
+.taggedArticle h3 {
+  background-image: linear-gradient(transparent 16px, #29D1BA 0);
+  width: fit-content;
+}
+
+.taggedArticle a {
+  text-decoration: none;
+}
+
 .allTag a {
-  border: 2px solid black;
+  border: 4px solid black;
   text-decoration: none;
   padding: 10px;
   font-weight: 800;

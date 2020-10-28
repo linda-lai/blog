@@ -7,7 +7,9 @@ import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/
 import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
 
-import Layout from './layout'
+import Layout from '../templates/layout'
+import HeroTitle from '../components/hero-title'
+import Content from '../templates/content'
 import SEO from '../components/seo'
 
 const BlogTemplate = ({
@@ -20,18 +22,19 @@ const BlogTemplate = ({
   return (
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />
-      <div className={styles.blogTemplateContainer}>
-        <Helmet title={`${post.frontmatter.title}`} />
-        <h1>{post.frontmatter.title}</h1>
-        <Img fluid={featuredImgFluid} />
-        <div
-          className={styles.blogTemplateContent}
-          dangerouslySetInnerHTML={{ __html: post.html }}>
+      <HeroTitle
+        title={post.frontmatter.title}
+      />
+      <Content>
+        <div className={styles.blogTemplateContainer}>
+          <Helmet title={`${post.frontmatter.title}`} />
+          <Img fluid={featuredImgFluid} />
+          <div
+            className={styles.blogTemplateBody}
+            dangerouslySetInnerHTML={{ __html: post.html }}>
+          </div>
         </div>
-        <Link to='/' className={styles.homeLink}>
-          Home
-        </Link>
-      </div>
+      </Content>
     </Layout>
   )
 }

@@ -1,51 +1,29 @@
-.headerContainer {
+.siteNav {
   background: dodgerblue;
-  border-top: 10px solid #000000;
-  border-bottom: 10px solid #000000;
+  border-top: 8px solid #000000;
+  border-bottom: 8px solid #000000;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.headerWrapper {
+.siteNavList {
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  position: relative;
-  height: 90px;
+  list-style: none;
+  margin: 10px;
+  justify-content: flex-end;
 }
 
-.navigation {
-  display: inline-flex;
-  height: auto;
-  align-items: center;
-}
-
-.headerTitle {
-  margin: 0;
-  line-height: normal;
-  display: inline;
-  color: #000000;
-}
-
-.headerSiteTitle {
-  height: 100%;
+.siteNavListLink {
   color: #000000;
   text-decoration: none;
   padding: 0px 10px;
+  font-weight: 550;
+  font-size: 18px;
 }
 
-.headerTitleLink {
-  height: 100%;
-  color: #000000;
-  text-decoration: none;
-  padding: 0px 10px;
-}
-
-.headerLink {
+.siteNavListItem {
   display: inline;
   margin: 0;
   padding: 0 20px;
@@ -53,7 +31,7 @@
 }
 
 @media only screen and (max-width: 1260px) {
-  .headerWrapper {
+  .siteNavList {
     padding-left: 30px;
   }
 }
@@ -67,13 +45,12 @@
     padding: 10px 0px;
   }
 
-  .headerWrapper {
+  .siteNavList {
     height: 120px;
     padding-left: 0px;
   }
 
-  .navigation {
-    display: flex;
+  .siteNavList {
     justify-content: center;
     width: 100%;
     padding-bottom: 10px;
@@ -85,7 +62,7 @@
     font-size: 1.9em;
   }
 
-  .headerLink {
+  .siteNavListLink {
     font-size: 1.3em;
     padding: 0 5px;
   }

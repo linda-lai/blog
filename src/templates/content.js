@@ -1,19 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Navigation from '../components/navigation'
-import Footer from '../components/footer'
 import '../styles/utils.css'
-
-import styles from '../styles/layout.module.css'
+import styles from '../styles/content.module.css'
 
 const Layout = ({ children }) => {
 
   return (
-    <section className={styles.blogSiteContainer}>
-      <Navigation />
+    <section className={styles.mainContent}>
       {children}
-      <Footer />
     </section>
   )
 }

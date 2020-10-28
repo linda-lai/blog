@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../templates/layout'
+import HeroTitle from '../components/hero-title'
+import Content from '../templates/content'
 import SEO from '../components/seo'
 
 import styles from '../styles/archive.module.css'
@@ -12,26 +14,26 @@ const Archive = ({ data }) => {
 
   return (
     <Layout>
-      <div className={styles.archiveContainer}>
-        <SEO title='Archive' />
-        <h1>Archive</h1>
-        <h4>{posts.length} posts</h4>
-        <div className={styles.archiveTagsLink}>
+      <SEO title='Archive' />
+      <HeroTitle
+        title={`Archive (${posts.length})`}
+      />
+      <Content>
+        <button className={styles.archiveTagsButton}>
           <Link to='/tags'>All Tags</Link>
-        </div>
-        <br />
+        </button>
         {posts.map(post => {
           const { frontmatter } = post.node
           return (
-            <div className={styles.archivePostLink}>
+            <section className={styles.archivedPostLinks}>
+              <p>{frontmatter.date}</p>
               <Link to={frontmatter.path}>
                 <h3>{frontmatter.title}</h3>
               </Link>
-              <h4>{frontmatter.date}</h4>
-            </div>
+            </section>
           )
         })}
-      </div>
+      </Content>
     </Layout>
   )
 }
