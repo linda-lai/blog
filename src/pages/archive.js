@@ -16,23 +16,21 @@ const Archive = ({ data }) => {
     <Layout>
       <SEO title='Archive' />
       <HeroTitle
-        title="Archive"
+        title={`Archive (${posts.length})`}
       />
       <Content>
-        <h4>{posts.length} posts</h4>
-        <div className={styles.archiveTagsLink}>
+        <button className={styles.archiveTagsButton}>
           <Link to='/tags'>All Tags</Link>
-        </div>
-        <br />
+        </button>
         {posts.map(post => {
           const { frontmatter } = post.node
           return (
-            <div className={styles.archivePostLink}>
+            <section className={styles.archivedPostLinks}>
+              <p>{frontmatter.date}</p>
               <Link to={frontmatter.path}>
                 <h3>{frontmatter.title}</h3>
               </Link>
-              <h4>{frontmatter.date}</h4>
-            </div>
+            </section>
           )
         })}
       </Content>

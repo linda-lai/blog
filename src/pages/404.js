@@ -5,7 +5,7 @@ import HeroTitle from '../components/hero-title'
 import Content from '../templates/content'
 import SEO from '../components/seo'
 
-const NotFoundPage = () => (
+const NotFound = () => (
   <Layout>
     <SEO title='404: Not found' />
     <HeroTitle
@@ -17,4 +17,4 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default NotFoundPage
+export default NotFound

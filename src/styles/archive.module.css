@@ -1,14 +1,25 @@
-.archiveTagsLink a {
+.archiveTagsButton a {
   text-decoration: none;
   padding: 10px 15px;
-  border: 2px solid black;
+  /* margin: 0; */
+  border: 4px solid black;
   font-weight: 800;
 }
 
-.archiveTagsLink a:hover {
+.archiveTagsButton a:hover {
   background: #FECFC9;
 }
 
-.archivePostLink a, a, a:visited, a:hover, a:active {
+.archivedPostLinks {
+  margin-top: 50px;
+}
+
+
+.archivedPostLinks a {
+  /* text-decoration: none; */
+}
+
+
+.archivedPostLinks a, a, a:visited, a:hover, a:active {
   color: inherit;
 }

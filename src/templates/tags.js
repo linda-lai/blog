@@ -22,7 +22,7 @@ const Tags = ({ pageContext, data }) => {
       <SEO title={`${tag}`} />
       <HeroTitle
         title={`"${tag}" Posts`}
-        description="Hi, hello, hey! I'm Linda. Often, I write code. Occasionally, I write about tech, pop culture, politics or any other flim-flam that piques my interest."
+      // description="Hi, hello, hey! I'm Linda. Often, I write code. Occasionally, I write about tech, pop culture, politics or any other flim-flam that piques my interest."
       />
       <Content>
         <div>

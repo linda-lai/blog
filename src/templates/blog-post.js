@@ -30,12 +30,9 @@ const BlogTemplate = ({
           <Helmet title={`${post.frontmatter.title}`} />
           <Img fluid={featuredImgFluid} />
           <div
-            className={styles.blogTemplateContent}
+            className={styles.blogTemplateBody}
             dangerouslySetInnerHTML={{ __html: post.html }}>
           </div>
-          <Link to='/' className={styles.homeLink}>
-            Home
-        </Link>
         </div>
       </Content>
     </Layout>

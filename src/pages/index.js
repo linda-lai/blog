@@ -8,12 +8,13 @@ import Content from '../templates/content'
 import SEO from '../components/seo'
 
 import { Helmet } from 'react-helmet'
-import Img from "gatsby-image"
 
 import styles from '../styles/index.module.css'
 
 const Home = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
+
+  const formatDate = date => new Date(date).toDateString()
 
   return (
     <Layout>
@@ -29,36 +30,23 @@ const Home = ({ data }) => {
             .map(({ node: post }) => {
               return (
                 <article className={styles.blogPostPreview} key={post.id}>
-                  <div className={styles.blogPostTitleContainer}>
-                    <h2 className={styles.blogPostTitle}>
-                      <Link to={post.frontmatter.path}>
-                        {post.frontmatter.title}
-                      </Link>
-                    </h2>
-                  </div>
-                  {/* {console.log(post.frontmatter.hero.childImageSharp.fluid)} */}
-                  <h5 className={styles.blogDate}>
-                    {post.frontmatter.date}
-                  </h5>
-                  <Link to={post.frontmatter.path}>
-                    <Img
-                      className={styles.blogPreviewImg}
-                      fluid={post.frontmatter.preview.childImageSharp.fluid} />
-                  </Link>
+                  <h2 className={styles.blogDate}>
+                    {formatDate(post.frontmatter.date)}
+                  </h2>
+                  <h2 className={styles.blogPostTitle}>
+                    <Link to={post.frontmatter.path}>
+                      {post.frontmatter.title}
+                    </Link>
+                  </h2>
                   <div className={styles.blogExcerpt}>
                     <p>{post.excerpt}</p>
                   </div>
-                  <Link
-                    to={post.frontmatter.path}
-                    className={styles.blogPostLink} >
-                    More...
-                </Link>
                 </article>
               )
             })}
         </div>
       </Content>
-    </Layout>
+    </Layout >
   )
 }
 
@@ -78,14 +66,7 @@ Home.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
-              path: PropTypes.string.isRequired,
-              preview: PropTypes.shape({
-                childImageSharp: PropTypes.shape({
-                  fluid: PropTypes.shape({
-                    src: PropTypes.string.isRequired
-                  })
-                })
-              })
+              path: PropTypes.string.isRequired
             })
           })
         })
@@ -110,16 +91,8 @@ export const homeQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD/MM/YYYY")
+            date(formatString: "DD MMMM YYYY", locale: "aest")
             path
-            preview {
-              childImageSharp {
-                fluid(maxWidth: 1024) {
-                  src
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }
