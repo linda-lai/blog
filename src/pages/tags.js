@@ -20,23 +20,17 @@ const Tags = ({
     <Layout>
       <SEO title='Tags' />
       <HeroTitle
-        title="Tags"
+        title="All Tags"
       />
       <Content>
-        <div>
-          <div>
-            <div className={styles.tagList}>
-              {group.map(tag => (
-                <div key={tag.fieldValue} className={styles.tag}>
-                  <Helmet title={tag.fieldValue} />
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-              </Link>
-                </div>
-              ))}
-            </div>
+        {group.map(tag => (
+          <div key={tag.fieldValue} className={styles.tagsList}>
+            <Helmet title={tag.fieldValue} />
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {`"${tag.fieldValue}" [${tag.totalCount}]`}
+            </Link>
           </div>
-        </div>
+        ))}
       </Content>
     </Layout>
   )

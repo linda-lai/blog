@@ -24,27 +24,25 @@ const Home = ({ data }) => {
         title="Linda Lai"
       />
       <Content>
-        <div className={styles.blogFeed}>
-          {posts
-            .filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }) => {
-              return (
-                <article className={styles.blogPostPreview} key={post.id}>
-                  <h2 className={styles.blogDate}>
-                    {formatDate(post.frontmatter.date)}
-                  </h2>
-                  <h2 className={styles.blogPostTitle}>
-                    <Link to={post.frontmatter.path}>
-                      {post.frontmatter.title}
-                    </Link>
-                  </h2>
-                  <div className={styles.blogExcerpt}>
-                    <p>{post.excerpt}</p>
-                  </div>
-                </article>
-              )
-            })}
-        </div>
+        {posts
+          .filter(post => post.node.frontmatter.title.length > 0)
+          .map(({ node: post }) => {
+            return (
+              <article className={styles.blogPostPreview} key={post.id}>
+                <h5 className={styles.blogDate}>
+                  {formatDate(post.frontmatter.date)}
+                </h5>
+                <h2 className={styles.blogPostTitle}>
+                  <Link to={post.frontmatter.path}>
+                    {post.frontmatter.title}
+                  </Link>
+                </h2>
+                <div className={styles.blogExcerpt}>
+                  <p>{post.excerpt}</p>
+                </div>
+              </article>
+            )
+          })}
       </Content>
     </Layout >
   )

@@ -1,7 +1,23 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
 html {
   font-family: Helvetica Neue, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: #29D1BA;
 }
 body {
   margin: 0;
@@ -14,7 +30,7 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -27,8 +43,8 @@ nav,
 section,
 summary {
   display: block;
-}
-audio,
+} */
+/* audio,
 canvas,
 progress,
 video {
@@ -189,7 +205,7 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
-}
+} */
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
@@ -215,7 +231,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-img {
+/* img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -225,7 +241,7 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
+} */
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -328,7 +344,7 @@ h6 {
   font-size: 0.78405rem;
   line-height: 1.1;
 }
-hgroup {
+/* hgroup {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -337,8 +353,8 @@ hgroup {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
-ul {
+} */
+/* ul {
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -361,8 +377,8 @@ ol {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
-}
-dl {
+} */
+/* dl {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -381,7 +397,7 @@ dd {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
+} */
 p {
   margin-left: 0;
   margin-right: 0;
@@ -390,9 +406,13 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  /* margin-bottom: 1.45rem; */
 }
-figure {
+
+p + p {
+  margin-top: 1.45rem;
+}
+/* figure {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -414,22 +434,9 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
-}
-table {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
-  border-collapse: collapse;
-  width: 100%;
-}
-fieldset {
+} */
+
+/* fieldset {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -569,6 +576,22 @@ abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
+} */
+
+/* Tables */
+table {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  border-collapse: collapse;
+  width: 100%;
 }
 thead {
   text-align: left;
@@ -594,6 +617,8 @@ th:last-child,
 td:last-child {
   padding-right: 0;
 }
+
+/* Monospaced Text */
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
@@ -634,6 +659,8 @@ button {
   box-shadow: 0px 0px 0px transparent;
   border: 0px solid transparent;
   text-shadow: 0px 0px 0px transparent;
+  font-size: inherit;
+  padding: 0;
 }
 
 button:hover {

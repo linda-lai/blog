@@ -2,6 +2,9 @@
   background-color:gold;
   border-bottom: 8px solid black;
   width: 100%;
+  height: 100%;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 .heroTitleWrapper {
@@ -11,7 +14,7 @@
 .heroTitle h1 {
   max-width: 1024px;
   /* padding: 0 10px 0 0; */
-  margin: 70px auto 50px auto;
+  margin: auto;
   /* text-align: center; */
 }
 

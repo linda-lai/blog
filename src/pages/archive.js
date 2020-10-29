@@ -7,6 +7,8 @@ import HeroTitle from '../components/hero-title'
 import Content from '../templates/content'
 import SEO from '../components/seo'
 
+import AllTagsButton from '../components/tags-button'
+
 import styles from '../styles/archive.module.css'
 
 const Archive = ({ data }) => {
@@ -16,21 +18,19 @@ const Archive = ({ data }) => {
     <Layout>
       <SEO title='Archive' />
       <HeroTitle
-        title={`Archive (${posts.length})`}
+        title={`Archive [${posts.length}]`}
       />
       <Content>
-        <button className={styles.archiveTagsButton}>
-          <Link to='/tags'>All Tags</Link>
-        </button>
+        <AllTagsButton />
         {posts.map(post => {
           const { frontmatter } = post.node
           return (
-            <section className={styles.archivedPostLinks}>
-              <p>{frontmatter.date}</p>
-              <Link to={frontmatter.path}>
-                <h3>{frontmatter.title}</h3>
+            <article className={styles.archivedPost}>
+              <h5>{frontmatter.date}</h5>
+              <Link to={frontmatter.path} className={styles.archivedPostLink}>
+                <h2>{frontmatter.title}</h2>
               </Link>
-            </section>
+            </article>
           )
         })}
       </Content>
