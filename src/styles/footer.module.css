@@ -6,7 +6,6 @@
   text-align: center;
   border-top: 8px solid black;
   border-bottom: 8px solid black;
-  /* margin-top: auto; */
 }
 
 .footer a {
@@ -14,12 +13,5 @@
 }
 
 .footer a:hover {
-  /* Distanced underline on hover */
   border-bottom: 4px solid black;
-
-  /* Closer and thicker underline on hover */
-  /* background-image: linear-gradient(black, transparent 75%);
-  background-position: 0 1.02em;
-  background-repeat: repeat-x;
-  background-size: auto; */
 }

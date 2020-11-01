@@ -20,7 +20,6 @@
   text-decoration: none;
   padding: 0px 10px;
   font-weight: 550;
-  font-size: 18px;
 }
 
 .siteNavListItem {
@@ -38,16 +37,9 @@
 
 
 @media only screen and (max-width: 830px) {
-  .headerTitle {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    padding: 10px 0px;
-  }
-
   .siteNavList {
     height: 120px;
-    padding-left: 0px;
+    /* padding-left: 0px; */
   }
 
   .siteNavList {
@@ -58,12 +50,8 @@
 }
 
 @media only screen and (max-width: 440px) {
-  .headerTitle {
-    font-size: 1.9em;
-  }
-
   .siteNavListLink {
     font-size: 1.3em;
-    padding: 0 5px;
+    /* padding: 0 5px; */
   }
 }
