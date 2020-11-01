@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Linda Lai`,
     description: `Words, words, words.`,
-    author: `@lindalogical`,
+    author: `@linda-lai`,
   },
   plugins: [
     // Support for server rendering data added with React Helmet (to control your document head)
