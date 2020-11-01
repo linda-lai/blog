@@ -26,10 +26,15 @@ const Archive = ({ data }) => {
           const { frontmatter } = post.node
           return (
             <article className={styles.archivedPost}>
-              <h5>{frontmatter.date}</h5>
-              <Link to={frontmatter.path} className={styles.archivedPostLink}>
-                <h2>{frontmatter.title}</h2>
+              <Link to={frontmatter.path}>
+                {frontmatter.date}
               </Link>
+              <h2>
+                <Link to={frontmatter.path} className={styles.archivedPostLink}>
+                  {frontmatter.title}
+                </Link>
+              </h2>
+              <p></p>
             </article>
           )
         })}

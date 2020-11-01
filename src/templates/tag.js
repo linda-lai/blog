@@ -27,7 +27,7 @@ const Tags = ({ pageContext, data }) => {
       />
       <Content>
         <Helmet title={`${tag}`} />
-        <h1>{tagHeader}</h1>
+        <h2>{tagHeader}</h2>
         <AllTagsButton />
         {edges.map(({ node }) => {
           const { title, path, date } = node.frontmatter
@@ -35,7 +35,7 @@ const Tags = ({ pageContext, data }) => {
             <article key={path} className={styles.taggedPost}>
               <h5>{date}</h5>
               <Link to={path}>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
               </Link>
             </article>
           )

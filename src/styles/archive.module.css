@@ -1,15 +1,11 @@
 .archivedPost {
   margin-top: 50px;
   max-width: 1024px;
-}
-
-.archivedPost h5 {
-  font-weight: bolder;
+  /* background-color: lightcyan; */
 }
 
 .archivedPost a {
-  text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 
 .archivedPostLink h2 {

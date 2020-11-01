@@ -24,12 +24,12 @@ const Tags = ({
       />
       <Content>
         {group.map(tag => (
-          <div key={tag.fieldValue} className={styles.tagsList}>
+          <button key={tag.fieldValue} className={styles.tagsList}>
             <Helmet title={tag.fieldValue} />
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {`"${tag.fieldValue}" [${tag.totalCount}]`}
             </Link>
-          </div>
+          </button>
         ))}
       </Content>
     </Layout>

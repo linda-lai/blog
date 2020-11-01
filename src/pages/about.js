@@ -16,15 +16,13 @@ const About = () => {
         title="About Me"
       />
       <Content>
-        <div className={styles.about}>
-          <p>
-            Hi, hello, hey! I'm Linda, a developing developer, code-blooded female and all round Hermione learning (and loving!) to code the software eating the world today. Perpetually curious, relentlessly enthusiastic and unabashedly dorky - that's me. A recent career changer into tech, I dipped my toes into the world of digital/development, found the water was warm, and haven't look back.
+        <p>
+          Hi, hello, hey! I'm Linda, a developing developer, code-blooded female and all round Hermione learning (and loving!) to code the software eating the world today. Perpetually curious, relentlessly enthusiastic and unabashedly dorky - that's me. A recent career changer into tech, I dipped my toes into the world of digital/development, found the water was warm, and haven't look back.
         </p>
-          <p>
-            Programming, puns, politics, pop culture and people - that's my jam.  Here you'll find an assortment of my musings and scribbles.
+        <p>
+          Programming, puns, politics, pop culture and people - that's my jam.  Here you'll find an assortment of my musings and scribbles.
         </p>
-          <img src={logo} alt="Lindalogical logo" className={styles.aboutLogo} />
-        </div>
+        <img src={logo} alt="Logo for Linda Lai" className={styles.aboutLogo} />
       </Content>
     </Layout>
   )

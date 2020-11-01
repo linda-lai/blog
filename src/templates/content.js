@@ -7,9 +7,9 @@ import styles from '../styles/content.module.css'
 const Layout = ({ children }) => {
 
   return (
-    <div className={styles.mainContent}>
+    <main className={styles.mainContent}>
       {children}
-    </div>
+    </main>
   )
 }
 

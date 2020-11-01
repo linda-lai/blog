@@ -3,7 +3,6 @@
   transition: 0.5s;
 }
 
-
 .blogPostTitle a:hover {
   background-image: linear-gradient(transparent 24px, pink 0);
 }
@@ -17,6 +16,6 @@
   margin-top: 1.45rem;
 }
 
-.blogExcerpt p {
+.blogExcerpt {
   text-overflow: ellipsis;
 }

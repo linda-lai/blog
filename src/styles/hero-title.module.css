@@ -7,19 +7,15 @@
   padding-bottom: 50px;
 }
 
-.heroTitleWrapper {
-  max-width: 1024px;
-}
-
 .heroTitle h1 {
   max-width: 1024px;
   margin: auto;
 }
 
-.heroTitle h2 {
+/* .heroTitle h2 {
   margin: 0 auto;
 }
 
 .heroTitle h2 {
   padding: 20px 0;
-}
+} */

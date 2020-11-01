@@ -6,10 +6,6 @@
   border-right: 8px solid black;
 }
 
-h3, h4, h5, h6, p, footer {
-  font-weight: 400;
-}
-
 span {
   background-image: linear-gradient(transparent 13px, #29D1BA 0);
 }

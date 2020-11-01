@@ -12,9 +12,7 @@ const Layout = ({ children }) => {
   return (
     <section className={styles.blogSiteContainer}>
       <Navigation />
-      <main className={styles.mainContent}>
-        {children}
-      </main>
+      {children}
       <Footer />
     </section>
   )

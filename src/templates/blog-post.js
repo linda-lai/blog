@@ -16,7 +16,9 @@ const BlogTemplate = ({
   data, // this prop will be injected by the GraphQL query
 }) => {
   const { markdownRemark: post } = data
+  // Hero image for blog post
   let featuredImgFluid = post.frontmatter.hero.childImageSharp.fluid
+  // Syntax highlighting for code snippets
   deckDeckGoHighlightElement()
 
   return (
@@ -28,10 +30,15 @@ const BlogTemplate = ({
       <Content>
         <Helmet title={`${post.frontmatter.title}`} />
         <Img fluid={featuredImgFluid} />
-        <div
+        <article
           className={styles.blogTemplateBody}
           dangerouslySetInnerHTML={{ __html: post.html }}>
-        </div>
+        </article>
+        {post.frontmatter.tags.map(tag => {
+          return (
+            <p>{tag}</p>
+          )
+        })}
       </Content>
     </Layout>
   )
@@ -67,6 +74,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        tags
       }
     }
   }
