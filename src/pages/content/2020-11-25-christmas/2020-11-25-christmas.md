@@ -7,7 +7,7 @@ hero: './1024x400-photo-1576100691393-accd075387e3.jpeg'
 preview: './768x400-photo-1575613202496-c882edb4702b.jpeg'
 ---
 
-<h2>What will this year bring?</h2>
+<h3>What will this year bring?</h3>
 
 Oooooh-weeee, Happy New Year!
 

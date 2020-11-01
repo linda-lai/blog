@@ -22,6 +22,7 @@ const Home = ({ data }) => {
       <Helmet title={data.site.siteMetadata.title} />
       <HeroTitle
         title="Linda Lai"
+        description="Welcome to my world of words."
       />
       <Content>
         {posts
@@ -32,11 +33,11 @@ const Home = ({ data }) => {
                 <Link to={post.frontmatter.path}>
                   {formatDate(post.frontmatter.date)}
                 </Link>
-                <h2 className={styles.blogPostTitle}>
+                <h3 className={styles.blogPostTitle}>
                   <Link to={post.frontmatter.path}>
                     {post.frontmatter.title}
                   </Link>
-                </h2>
+                </h3>
                 <p className={styles.blogExcerpt}>
                   {post.excerpt}
                 </p>

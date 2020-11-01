@@ -6,7 +6,7 @@ tags: ['tech', 'career', 'goals']
 hero: './1024x400-photo-1576100691393-accd075387e3.jpeg'
 ---
 
-<h2>What will this year bring?</h2>
+<h3>What will this year bring?</h3>
 
 Oooooh-weeee, Happy New Year!
 

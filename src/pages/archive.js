@@ -29,11 +29,11 @@ const Archive = ({ data }) => {
               <Link to={frontmatter.path}>
                 {frontmatter.date}
               </Link>
-              <h2>
+              <h3>
                 <Link to={frontmatter.path} className={styles.archivedPostLink}>
                   {frontmatter.title}
                 </Link>
-              </h2>
+              </h3>
               <p></p>
             </article>
           )
