@@ -16,13 +16,17 @@ const Home = ({ data }) => {
 
   const formatDate = date => new Date(date).toDateString()
 
+  const pageTitle = 'Home'
+  const siteName = 'Linda Lai'
+  const siteDescription = 'Welcome to my world of words.'
+
   return (
     <Layout>
-      <SEO title='Home' />
+      <SEO title={pageTitle} />
       <Helmet title={data.site.siteMetadata.title} />
       <HeroTitle
-        title="Linda Lai"
-        description="Welcome to my world of words."
+        title={siteName}
+        description={siteDescription}
       />
       <Content>
         {posts

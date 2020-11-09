@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import { Helmet } from 'react-helmet'
 import kebabCase from 'lodash/kebabCase'
 
 import Layout from '../templates/layout'
@@ -10,32 +9,35 @@ import HeroTitle from '../components/hero-title'
 import Content from '../templates/content'
 import SEO from '../components/seo'
 
+import Button from '../components/button'
+
 import styles from '../styles/tags.module.css'
 
 const Tags = ({
   data: {
     allMarkdownRemark: { group },
   }
-}) => (
+}) => {
+
+  const pageTitle = "All Tags"
+  return (
     <Layout>
-      <SEO title='Tags' />
-      <HeroTitle
-        title="All Tags"
-      />
+      <SEO title={pageTitle} />
+      <HeroTitle title={pageTitle} />
       <Content>
-        {group.map(tag => (
-          <button key={tag.fieldValue} className={styles.tagsList}>
-            <Helmet title={tag.fieldValue} />
-            <button>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {`"${tag.fieldValue}" [${tag.totalCount}]`}
-              </Link>
-            </button>
-          </button>
-        ))}
+        <div className={styles.tagsList}>
+          {group.map(tag => (
+            <Button
+              key={tag.fieldValue}
+              link={`/tags/${kebabCase(tag.fieldValue)}/`}
+              text={`"${tag.fieldValue}" [${tag.totalCount}]`}
+            />
+          ))}
+        </div>
       </Content>
-    </Layout>
+    </Layout >
   )
+}
 
 Tags.propTypes = {
   data: PropTypes.shape({

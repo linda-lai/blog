@@ -7,21 +7,26 @@ import HeroTitle from '../components/hero-title'
 import Content from '../templates/content'
 import SEO from '../components/seo'
 
-import AllTagsButton from '../components/tags-button'
+import Button from '../components/button'
 
 import styles from '../styles/archive.module.css'
 
 const Archive = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
+  const pageTitle = 'Archive'
 
   return (
     <Layout>
-      <SEO title='Archive' />
+      <SEO title={pageTitle} />
       <HeroTitle
-        title={`Archive [${posts.length}]`}
+        title={`${pageTitle} [${posts.length}]`}
       />
       <Content>
-        <AllTagsButton />
+        <Button
+          key="tags"
+          link="/tags"
+          text="All Tags"
+        />
         {posts.map(post => {
           const { frontmatter } = post.node
           return (

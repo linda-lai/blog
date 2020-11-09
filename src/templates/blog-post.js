@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 
-import { Helmet } from 'react-helmet'
 import styles from '../styles/blog-post.module.css'
 
 import Layout from '../templates/layout'
@@ -28,7 +27,6 @@ const BlogTemplate = ({
         title={post.frontmatter.title}
       />
       <Content>
-        <Helmet title={`${post.frontmatter.title}`} />
         <Img fluid={featuredImgFluid} />
         <article
           className={styles.blogTemplateBody}

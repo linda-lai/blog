@@ -1,0 +1,14 @@
+.button {
+  border: 5px solid black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.button:hover {
+  background: #FECFC9;
+}
+
+.button a {
+  padding: 10px;
+  line-height: 2.5;
+}
