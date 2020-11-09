@@ -194,3 +194,9 @@ strong {
   /* font-weight: 400; */
   background-image: linear-gradient(transparent 26px, #29D1BA 0);
 }
+
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 830px) {
+}
