@@ -11,11 +11,6 @@
   text-decoration: none;
 }
 
-.blogDate {
-  font-weight: bolder;
-  margin-top: 1.45rem;
-}
-
 .blogExcerpt {
   text-overflow: ellipsis;
 }

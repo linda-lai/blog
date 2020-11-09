@@ -26,9 +26,11 @@ const Tags = ({
         {group.map(tag => (
           <button key={tag.fieldValue} className={styles.tagsList}>
             <Helmet title={tag.fieldValue} />
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {`"${tag.fieldValue}" [${tag.totalCount}]`}
-            </Link>
+            <button>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {`"${tag.fieldValue}" [${tag.totalCount}]`}
+              </Link>
+            </button>
           </button>
         ))}
       </Content>

@@ -5,7 +5,11 @@ const HeroTitle = (props) => {
   return (
     <header className={styles.heroTitle}>
       <h1>{props.title}</h1>
-      <h2>{props.description}</h2>
+      {
+        props.description ?
+          <h2>{props.description}</h2>
+          : null
+      }
     </header >
   )
 }

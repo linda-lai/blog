@@ -30,9 +30,11 @@ const Home = ({ data }) => {
           .map(({ node: post }) => {
             return (
               <article className={styles.blogPostPreview} key={post.id}>
-                <Link to={post.frontmatter.path}>
-                  {formatDate(post.frontmatter.date)}
-                </Link>
+                <p className="date">
+                  <Link to={post.frontmatter.path}>
+                    {formatDate(post.frontmatter.date)}
+                  </Link>
+                </p>
                 <h3 className={styles.blogPostTitle}>
                   <Link to={post.frontmatter.path}>
                     {post.frontmatter.title}

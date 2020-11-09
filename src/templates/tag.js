@@ -17,7 +17,7 @@ const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `Post${totalCount === 1 ? '' : 's'
-    } tagged "${tag}" [${totalCount}]`
+    } tagged "${tag[0].toUpperCase() + tag.slice(1)}"`
 
   return (
     <Layout>
@@ -32,7 +32,9 @@ const Tags = ({ pageContext, data }) => {
           const { title, path, date } = node.frontmatter
           return (
             <article key={path} className={styles.taggedPost}>
-              <Link to={path}>{date}</Link>
+              <p className="date">
+                <Link to={path}>{date}</Link>
+              </p>
               <Link to={path}>
                 <h3>{title}</h3>
               </Link>
