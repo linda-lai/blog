@@ -8,12 +8,19 @@
 }
 
 .heroTitle h1 {
-  max-width: 1024px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .heroTitle h2 {
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 25px 0;
+}
+
+@media only screen and (max-width: 1056px) {
+  .heroTitle h1,
+  .heroTitle h2 {
+    padding: 0 30px;
+  }
 }
