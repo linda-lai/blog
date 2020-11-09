@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Layout from './layout'
@@ -7,7 +6,7 @@ import HeroTitle from '../components/hero-title'
 import Content from './content'
 import SEO from '../components/seo'
 
-import AllTagsButton from '../components/tags-button'
+import Button from '../components/button'
 
 import styles from '../styles/tag.module.css'
 
@@ -26,8 +25,10 @@ const Tags = ({ pageContext, data }) => {
         title={tagHeader}
       />
       <Content>
-        <Helmet title={`${tag}`} />
-        <AllTagsButton />
+        <Button
+          link="/tags"
+          text="All Tags"
+        />
         {edges.map(({ node }) => {
           const { title, path, date } = node.frontmatter
           return (

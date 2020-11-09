@@ -9,11 +9,12 @@ import styles from '../styles/about.module.css'
 import logo from '../images/logo-lindalogical.png'
 
 const About = () => {
+  const pageTitle = 'About'
   return (
     <Layout>
-      <SEO title='About' />
+      <SEO title={pageTitle} />
       <HeroTitle
-        title="About Me"
+        title={pageTitle}
       />
       <Content>
         <p>
