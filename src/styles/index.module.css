@@ -4,7 +4,7 @@
 }
 
 .blogPostTitle a:hover {
-  background-image: linear-gradient(transparent 24px, pink 0);
+  background-image: linear-gradient(transparent 18px, pink 0);
 }
 
 .blogPostTitle a, a:visited, a:hover, a:active {

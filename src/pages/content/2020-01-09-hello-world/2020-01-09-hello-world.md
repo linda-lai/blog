@@ -3,7 +3,7 @@ path: '/2020-01-09-hello-world'
 date: 2020-01-09
 title: 'Catching a Big, Bad Bug'
 tags: ['tech', 'career', 'goals', 'learning', 'javascript', 'golang']
-hero: './1024x400-photo-1576100691393-accd075387e3.jpeg'
+hero: './768x400-photo-1575613202496-c882edb4702b.jpeg'
 ---
 
 <h3>What will this year bring?</h3>

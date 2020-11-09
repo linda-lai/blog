@@ -1,21 +1,14 @@
 .archivedPost {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
-.archivedPost a {
-  display: block;
+/* Spacing between date and archived post title */
+.archivedPost p {
+  margin-bottom: 20px;
 }
 
-.archivedPostLink h2 {
-  width: auto;
-}
-
-.archivedPostLink h2:hover {
+.archivedPostTitle a:hover {
   background-image: linear-gradient(transparent 20px, pink 0);
-}
-
-.archivedPost a:hover {
-  text-decoration: none;
 }
 
 .archivedPost a, a, a:visited, a:hover, a:active {
