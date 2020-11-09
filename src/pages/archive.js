@@ -36,8 +36,8 @@ const Archive = ({ data }) => {
                   {frontmatter.date}
                 </Link>
               </p>
-              <h3>
-                <Link to={frontmatter.path} className={styles.archivedPostLink}>
+              <h3 className={styles.archivedPostTitle}>
+                <Link to={frontmatter.path}>
                   {frontmatter.title}
                 </Link>
               </h3>
