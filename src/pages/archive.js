@@ -80,7 +80,7 @@ export const archiveQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD-MM-YYYY")
+            date(formatString: "DD MMMM YYYY", locale: "aest")
             path
           }
         }
