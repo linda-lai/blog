@@ -7,7 +7,7 @@ const Button = props => {
   const { link, text } = props
 
   return (
-    <button className={`${styles.button}`}>
+    <button className={styles.button}>
       <Link to={link}>{text}</Link>
     </button>
   )

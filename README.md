@@ -14,5 +14,5 @@ To run the blog locally, install related dependencies:
 
 Start the development server:
 ```
-(npm | yarn) run develop || npx gatsby develop
+npx gatsby develop || yarn run develop
 ```
