@@ -37,7 +37,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  /* color: hsla(0, 0%, 0%, 0.8); */
   font-family: Helvetica Neue, georgia, sans-serif;
   font-weight: normal;
   word-wrap: break-word;

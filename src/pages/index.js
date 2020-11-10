@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../templates/layout'
 import HeroTitle from '../components/hero-title'
@@ -9,20 +9,14 @@ import SEO from '../components/seo'
 
 import { Helmet } from 'react-helmet'
 
-import styles from '../styles/index.module.css'
+import BlogPostCard from '../components/blog-card'
 
 const Home = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
-  const formatDate = date => new Date(date).toDateString()
-
   const pageTitle = 'Home'
   const siteName = 'Linda Lai'
   const siteDescription = 'Welcome to my world of words.'
-
-  const homepageHeroPost = posts[0]
-  const homepagePostsFeed = posts.slice(1)
-  console.log(homepageHeroPost, homepagePostsFeed)
 
   return (
     <Layout>
@@ -33,27 +27,29 @@ const Home = ({ data }) => {
         description={siteDescription}
       />
       <Content>
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <article className={styles.blogPostPreview} key={post.id}>
-                <p className="date">
-                  <Link to={post.frontmatter.path}>
-                    {formatDate(post.frontmatter.date)}
-                  </Link>
-                </p>
-                <h3 className={styles.blogPostTitle}>
-                  <Link to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                </h3>
-                <p className={styles.blogExcerpt}>
-                  {post.excerpt}
-                </p>
-              </article>
-            )
-          })}
+        {
+          posts.length === 0 && (
+            <article>
+              No posts :(
+            </article>
+          )
+        }
+        {
+          posts.length > 0 && (
+            <React.Fragment>
+              {posts
+                .filter(post => post.node.frontmatter.title.length > 0)
+                .map(({ node: post }) => {
+                  return (
+                    <BlogPostCard
+                      key={post.id}
+                      post={post}
+                    />
+                  )
+                })}
+            </React.Fragment>
+          )
+        }
       </Content>
     </Layout >
   )
@@ -75,7 +71,14 @@ Home.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
-              path: PropTypes.string.isRequired
+              path: PropTypes.string.isRequired,
+              preview: PropTypes.shape({
+                childImageSharp: PropTypes.shape({
+                  fluid: PropTypes.shape({
+                    src: PropTypes.string.isRequired
+                  })
+                })
+              })
             })
           })
         })
@@ -102,6 +105,14 @@ export const homeQuery = graphql`
             title
             date(formatString: "DD MMMM YYYY", locale: "aest")
             path
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 1024) {
+                  src
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
