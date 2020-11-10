@@ -5,7 +5,6 @@ import '../styles/utils.css'
 import styles from '../styles/content.module.css'
 
 const Layout = ({ children }) => {
-
   return (
     <main className={styles.mainContent}>
       {children}

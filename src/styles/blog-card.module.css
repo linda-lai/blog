@@ -1,6 +1,15 @@
 .blogPostPreview {
   height: auto;
-  transition: 0.5s;
+  display: inline-block;
+}
+
+.blogPostPreview:first-child {
+  width: 100%;
+}
+
+.blogPostPreview {
+  width: 50%;
+  padding: 15px;
 }
 
 .blogPostTitle a:hover {
