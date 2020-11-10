@@ -1,11 +1,19 @@
 .archivedPost {
   margin-top: 25px;
+  /* display: flex; */
+  width: 100%;
 }
 
 /* Spacing between date and archived post title */
 .archivedPost p {
   margin-bottom: 20px;
+  font-size: 22px;
 }
+
+/* .archivedPost h3 {
+  justify-content: flex-end;
+  margin-left: auto;
+} */
 
 .archivedPostTitle a:hover {
   background-image: linear-gradient(transparent 20px, pink 0);
