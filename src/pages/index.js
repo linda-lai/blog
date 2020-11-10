@@ -20,6 +20,10 @@ const Home = ({ data }) => {
   const siteName = 'Linda Lai'
   const siteDescription = 'Welcome to my world of words.'
 
+  const homepageHeroPost = posts[0]
+  const homepagePostsFeed = posts.slice(1)
+  console.log(homepageHeroPost, homepagePostsFeed)
+
   return (
     <Layout>
       <SEO title={pageTitle} />

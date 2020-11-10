@@ -100,6 +100,7 @@ table {
   line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 thead {
   text-align: left;
@@ -129,7 +130,7 @@ td:last-child {
 /* Monospaced Text */
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  /* background-color: hsla(0, 0%, 0%, 0.04); */
   border-radius: 3px;
   font-family: "Helvetica Neue", "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
