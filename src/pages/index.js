@@ -12,7 +12,10 @@ import { Helmet } from 'react-helmet'
 import BlogPostCard from '../components/blog-card'
 
 const Home = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
+  let { edges: posts } = data.allMarkdownRemark
+
+  // Blog posts starting at index[0], up to (but not including) index[7]
+  // posts = posts.slice(0, 7)
 
   const pageTitle = 'Home'
   const siteName = 'Linda Lai'
