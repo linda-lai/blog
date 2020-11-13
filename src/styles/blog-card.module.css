@@ -3,13 +3,13 @@
   display: inline-block;
 }
 
-.blogPostPreview:first-child {
-  width: 100%;
-}
-
 .blogPostPreview {
   width: 50%;
   padding: 15px;
+}
+
+.blogPostPreview:first-child {
+  width: 100%;
 }
 
 .blogPostTitle a:hover {
@@ -21,5 +21,13 @@
 }
 
 .blogExcerpt {
+  margin-top: 20px;
   text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 440px) {
+  .blogPostPreview {
+    width: 100%;
+    padding: 0px;
+  }
 }

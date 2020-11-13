@@ -19,7 +19,7 @@ const Home = ({ data }) => {
 
   const pageTitle = 'Home'
   const siteName = 'Linda Lai'
-  const siteDescription = 'Welcome to my world of words.'
+  const siteDescription = 'Hi, hello, hey.'
 
   return (
     <Layout>
@@ -27,7 +27,7 @@ const Home = ({ data }) => {
       <Helmet title={data.site.siteMetadata.title} />
       <HeroTitle
         title={siteName}
-        description={siteDescription}
+      // description={siteDescription}
       />
       <Content>
         {

@@ -1,17 +1,25 @@
 .footer {
   display: block;
   background: #EB362F;
-  line-height: 60px;
   font-weight: bolder;
   text-align: center;
   border-top: 8px solid black;
   border-bottom: 8px solid black;
+  justify-items: center;
 }
 
-.footer a {
-  text-decoration: none;
+.footerIcons {
+  width: 60%;
+  margin: 10px auto;
 }
 
-.footer a:hover {
-  border-bottom: 4px solid black;
+.footer img {
+  width: 65px;
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 440px) {
+  .footer p {
+    width: 70%;
+  }
 }
