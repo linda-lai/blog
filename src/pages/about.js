@@ -18,10 +18,12 @@ const About = () => {
       />
       <Content>
         <p>
-          Hi, hello, hey! I'm Linda, a developing developer, code-blooded female and all round Hermione learning (and loving!) to code the software eating the world today. Perpetually curious, relentlessly enthusiastic and unabashedly dorky - that's me. A recent career changer into tech, I dipped my toes into the world of digital/development, found the water was warm, and haven't look back.
+          Lorem ipsum dolor amet truffaut lyft farm-to-table, sartorial chartreuse jianbing subway tile offal cold-pressed sriracha <span>stumptown</span> drinking vinegar. Kombucha pitchfork drinking vinegar, chia gentrify salvia typewriter waistcoat keytar vape messenger bag etsy kickstarter intelligentsia blog. Tumblr brooklyn whatever try-hard authentic. Salvia hella bespoke, keffiyeh echo park beard everyday carry semiotics scenester pitchfork roof party. Offal deep v meh tbh. Gentrify 90's vice selvage shaman, neutra pour-over. Chartreuse franzen jianbing, succulents pok pok air plant freegan humblebrag.
+
         </p>
         <p>
-          Programming, puns, politics, pop culture and people - that's my jam.  Here you'll find an assortment of my musings and scribbles.
+          Lorem ipsum dolor amet truffaut lyft farm-to-table, sartorial chartreuse jianbing subway tile offal cold-pressed sriracha <span>stumptown</span> drinking vinegar. Kombucha pitchfork drinking vinegar, chia gentrify salvia typewriter waistcoat keytar vape messenger bag etsy kickstarter intelligentsia blog. Tumblr brooklyn whatever try-hard authentic. Salvia hella bespoke, keffiyeh echo park beard everyday carry semiotics scenester pitchfork roof party. Offal deep v meh tbh. Gentrify 90's vice selvage shaman, neutra pour-over. Chartreuse franzen jianbing, succulents pok pok air plant freegan humblebrag.
+
         </p>
         <img src={logo} alt="Logo for Linda Lai" className={styles.aboutLogo} />
       </Content>
