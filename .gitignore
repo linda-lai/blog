@@ -73,3 +73,7 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Notes
+TODO.md
+blog-refs/
